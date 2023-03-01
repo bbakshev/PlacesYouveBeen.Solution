@@ -36,5 +36,15 @@ namespace PlacesYouveBeen.Tests
       List<Destination> result = Destination.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsDestinationList_DestinationList()
+    {
+    string city1 = "Paris, Texas";
+    string city2 = "Paris, France";
+    Destination newDestination1 = new Destination(city1);
+    Destination newDestination2 = new Destination(city2);
+    List<Destination> newList = new List<Destination> { newDestination1, newDestination2 };
+    }
   }
 }
