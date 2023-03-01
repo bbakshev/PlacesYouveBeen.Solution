@@ -59,7 +59,15 @@ namespace PlacesYouveBeen.Tests
   }
 
   [TestMethod]
-  public void 
+  public void Find_ReturnsCorrectDestination_Destination()
+  {
+    string city1 = "Paris, Texas";
+    string city2 = "Paris, France";
+    Destination newDestination1 = new Destination(city1);
+    Destination newDestination2 = new Destination(city2);
+    Destination result = Destination.Find(2);
+    Assert.AreEqual(newDestination2, result);
+  }
 
   }
 }
