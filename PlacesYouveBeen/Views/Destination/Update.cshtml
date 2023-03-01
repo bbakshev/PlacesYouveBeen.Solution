@@ -13,7 +13,7 @@
     @using PlacesYouveBeen.Models;
       <form action="/destinations/patch" method="post">
         <input type="hidden" id="id" name="id" value="@Model.Id">
-        <label for="city">Update Name/Description</label>
+        <label for="city">Update Name</label>
         <input id="city" name="city" type="text" value="@Model.CityName">
         <label for="image">Update Image Link</label>
         <input id="image" name="image" type="text" value="@Model.Image">
