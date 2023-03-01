@@ -21,7 +21,7 @@ namespace PlacesYouveBeen.Tests
     }
 
     [TestMethod]
-    public void GetCityName_ReturnsCityName_String()
+    public void GetAndSetCityName_ReturnsCityName_String()
     {
       string city = "Paris, Texas";
       Destination newDestination = new Destination(city);
@@ -29,5 +29,12 @@ namespace PlacesYouveBeen.Tests
       Assert.AreEqual(city, result);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_DestinationList()
+    {
+      List<Destination> newList = new List<Destination> { };
+      List<Destination> result = Destination.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
