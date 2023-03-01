@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using PlacesYouveBeen.Solution.Models;
+using PlacesYouveBeen.Models;
 
-namespace PlacesYouveBeen.Solution.Controllers;
+namespace PlacesYouveBeen.Controllers;
 
 public class HomeController : Controller
 {
