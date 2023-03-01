@@ -6,12 +6,12 @@ using System;
 namespace PlacesYouveBeen.Tests
 {
   [TestClass]
-  public class PlacesTests
+  public class PlacesTests : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   Places.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Destination.ClearAll();
+    }
 
     [TestMethod]
     public void PlacesConstructor_CreatesInstanceOfPlaces_Places()
@@ -40,11 +40,13 @@ namespace PlacesYouveBeen.Tests
     [TestMethod]
     public void GetAll_ReturnsDestinationList_DestinationList()
     {
-    string city1 = "Paris, Texas";
-    string city2 = "Paris, France";
-    Destination newDestination1 = new Destination(city1);
-    Destination newDestination2 = new Destination(city2);
-    List<Destination> newList = new List<Destination> { newDestination1, newDestination2 };
+      string city1 = "Paris, Texas";
+      string city2 = "Paris, France";
+      Destination newDestination1 = new Destination(city1);
+      Destination newDestination2 = new Destination(city2);
+      List<Destination> newList = new List<Destination> { newDestination1, newDestination2 };
+      List<Destination> result = Destination.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
