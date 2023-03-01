@@ -21,9 +21,9 @@ namespace PlacesYouveBeen.Controllers
     }
 
     [HttpPost("/destinations")]
-    public ActionResult Create(string description)
+    public ActionResult Create(string description, string image, string journal)
     {
-      Destination myDestination = new Destination(description);
+      Destination myDestination = new Destination(description, image, journal);
       return RedirectToAction("Index");
     }
 
