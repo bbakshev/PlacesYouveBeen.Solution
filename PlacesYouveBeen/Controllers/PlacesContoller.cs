@@ -40,5 +40,20 @@ namespace PlacesYouveBeen.Controllers
       Destination foundDestination = Destination.Find(id);
       return View(foundDestination);
     }
+
+    [HttpGet("destinations/update/{id}")]
+    public ActionResult Update(int id)
+    {
+      Destination foundDestination = Destination.Find(id);
+      return View(foundDestination);
+    }
+
+    [HttpPost("/destinations/patch")]
+    public ActionResult Patch(string city, string image, string journal, int id)
+    {
+      Destination thisDestination = Destination.Find(id);
+      thisDestination.Update(city, image, journal);
+      return RedirectToAction("Index");
+    }
   }
 }

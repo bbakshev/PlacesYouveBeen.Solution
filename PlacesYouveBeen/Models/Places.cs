@@ -33,5 +33,13 @@ namespace PlacesYouveBeen.Models
     {
       return _instances[searchId - 1];
     }
+
+    public void Update(string city, string image, string journal)
+    {
+      this.CityName = city;
+      this.Image = image;
+      this.Journal = journal;
+    }
+
   }
 }

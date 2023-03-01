@@ -20,7 +20,7 @@
     <ul>
       @foreach (Destination city in Model)
       {
-        <li><a href="destinations/@city.Id">@city.CityName</a></li>
+        <li><a href="destinations/@city.Id">@city.CityName</a><br><a href="destinations/update/@city.Id">Update</a></li>
       }
     </ul>
 
