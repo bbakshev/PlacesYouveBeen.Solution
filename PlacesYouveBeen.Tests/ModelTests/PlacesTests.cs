@@ -48,5 +48,15 @@ namespace PlacesYouveBeen.Tests
       List<Destination> result = Destination.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetId_DestinationInstantiateWithAnIdAndGetterReturns_Int()
+  {
+    string city = "Paris, Texas";
+    Destination newDestination = new Destination(city);
+    int result = newDestination.Id;
+    Assert.AreEqual(1, result);
+  }
+
   }
 }
