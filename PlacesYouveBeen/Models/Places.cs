@@ -24,5 +24,10 @@ namespace PlacesYouveBeen.Models
     {
       _instances.Clear();
     }
+
+    public static Destination Find(int searchId)
+    {
+      return _instances[searchId - 1];
+    }
   }
 }

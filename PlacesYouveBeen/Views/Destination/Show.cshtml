@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -10,9 +10,12 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h1>Welcome To The Traveler's Journal!</h1>
-    <a href='/destinations/new'>Add a new city</a>
-    <br>
-    <a href='/destinations'>See list of cities</a>
+    @using PlacesYouveBeen.Models;
+    <h1>Destination Details: </h1>
+
+    <h2>@Model.CityName</h2>
+
+    <a href='/destinations/new'>Add another city</a>
+    <a href='/destinations'>View all cities</a>
   </body>
 </html>
