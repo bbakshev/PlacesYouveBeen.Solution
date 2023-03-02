@@ -9,19 +9,22 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
   </head>
-  <body>
-    @using PlacesYouveBeen.Models;
-    <h1>Destination Details: </h1>
+  <body style="background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url(https://previews.agefotostock.com/previewimage/medibigoff/a4526afd7483ecb57ffcdfcf0c79a4e9/esy-008064247.jpg) no-repeat center fixed;">
 
-    <h2>@Model.CityName</h2>
+    <div style="text-align: center;">
+      @using PlacesYouveBeen.Models;
+      <h1>Destination Details: </h1>
 
-    <img src="@Model.Image" alt="Picture of the Location">
+      <h2>@Model.CityName</h2>
 
-    <p>@Model.Journal</p>
+      <img width=35% src="@Model.Image" alt="Picture of the Location">
 
-    <p><a href="/destinations/update/@Model.Id">Edit</a></p>
-    <!-- <a href='/destinations/update/@Model.Id'>Update Entry</a> -->
-    <p><a href='/destinations/new'>Add another city</a></p>
-    <p><a href='/destinations'>View all cities</a></p>
+      <p>@Model.Journal</p>
+
+      <p><a href="/destinations/update/@Model.Id">Edit</a></p>
+      <!-- <a href='/destinations/update/@Model.Id'>Update Entry</a> -->
+      @* <p><a href='/destinations/new'>Add another city</a></p> *@
+      <p><a href='/destinations'>View all cities</a></p>
+    </div>
   </body>
 </html>
